@@ -35,14 +35,14 @@ Function Invoke-VcRunspace {
       Get prompted for login information and then return a report for a single vCenter Server.
 
       .EXAMPLE
-      $credsVC = Get-Credential administrator@vshere.local
+      $credsVC = Get-Credential administrator@vsphere.local
       $vcList = @('vc01.lab.local', 'vc02.lab.local', 'vc03.lab.local')
       $report = Invoke-VcRunspace -Server $vcList -Credential $credsVC
 
       Save a credential to a variable and then return results for several vCenter Servers.
 
       .EXAMPLE
-      $credsVC = Get-Credential administrator@vshere.local
+      $credsVC = Get-Credential administrator@vsphere.local
       $report = Invoke-VcRunspace -Server (gc $home/vc-list.txt) -Credential $credsVC
 
       Use Get-Content to feed the Server parameter by pointing to a text file. The text file should have one vCenter Server name per line.
